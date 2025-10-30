@@ -1,9 +1,13 @@
-function App() {
-  return(<div>
-    <h1>
-      Hello React Learners
-    </h1>
-  </div>)
+import Header from "./Header";
+import Main from "./Main";
+import Footer from "./Footer";
+function App(){
+    return(
+        <>
+        <Header/>
+        <Main/>
+        <Footer/>
+        </>
+    )
 }
-
 export default App;

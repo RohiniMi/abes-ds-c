@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import Header from './Header';
+// const reactElementStyle = {
+//   height: "200px",
+//   width:"200px",
+//   backgroundColor: "grey"
+// }
+const reactElement = <div style={{ backgroundColor: "beige" }}>Hello React Learners!</div>;
 
-const data = {
-  name: "abc",
-  section: "c"
-}
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Header data={data}> </Header>
-    <App />
-  </React.StrictMode>
+  <>
+    {/* {App()}
+    <App></App> */}
+    <App/>
+  </>
 );
 
