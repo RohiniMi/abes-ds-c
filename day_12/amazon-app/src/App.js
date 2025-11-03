@@ -1,9 +1,10 @@
 import './App.css';
-const productObject = {
-    img: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/HomeDecor_2x._SY232_CB563137408_.jpg",
-    title: "Home decor",
-    price: "price"
-}
+import productObject from './product.json';
+// const productObject = {
+//     img: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/HomeDecor_2x._SY232_CB563137408_.jpg",
+//     title: "Home decor",
+//     price: "price"
+// }
 const Header = () => {
     return (
         <div className="header">
@@ -25,12 +26,12 @@ const Search = () => {
         </div>
     )
 }
-const Product = () => {
+const Product = ({product}) => {
     return (
         <div className='product'>
-            <img className='prod-img' src={productObject.img} alt="product-img" />
-            <h4>{productObject.title}</h4>
-            <h5>{productObject.price}</h5>
+            <img className='prod-img' src={product.img} alt="product-img" />
+            <h4>{product.title}</h4>
+            <h5>{product.price}</h5>
         </div>
     )
 }
@@ -39,13 +40,7 @@ const Body = () => {
         <div className='body-container'>
             <Search />
             <div className='prod-container'>
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
+               { productObject.map((product)=><Product product={product}/>)}
             </div>
         </div>
     )
