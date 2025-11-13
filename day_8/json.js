@@ -1,6 +1,5 @@
 //json
 //javaScript object notation
-
 //object
 const student = {
     rollNo: 123,
